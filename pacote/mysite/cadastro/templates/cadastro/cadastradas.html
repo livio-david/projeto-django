@@ -1,0 +1,14 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>nome</th>
+            <th>idade</th>
+        </tr>
+        {% for pessoa in pessoas %}
+        <tr>
+            <td>{{pessoa.nome}}</td>
+            <td>{{pessoa.idade}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
