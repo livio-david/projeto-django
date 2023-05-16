@@ -5,10 +5,9 @@
 </head>
 <body>
 	<h1>cadastre-me</h1>
-    <form action="{% url 'cadastradas' %}" method="post">
-        <div style="text-align: center;" class="container">
-            Nome <input name="nome" class="form-control-sm" type="text">
-            Idade <input name="idade" class="form-control-sm" type="text">
+    <form action="cadastrar" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
             <button class="form-control-sm">Enviar</button>
         </div>
     </form>
